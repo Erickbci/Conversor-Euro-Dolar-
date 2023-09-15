@@ -15,9 +15,9 @@ import com.example.conversoreurodolar.databinding.ActivityMainBinding
 
         binding.buttonConverter.setOnClickListener {
             val euros = binding.editEuro.text.toString().toDouble()
-            val dolares = euros * 0.8
+            val dolares = String.format("%.2f", euros * 0.8)
 
-            binding.textDolar.text = dolares.toString()
+            binding.textDolar.text = "${dolares} $"
         }
     }
 }
